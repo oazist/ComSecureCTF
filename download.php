@@ -13,9 +13,7 @@ if (check_login_status() == false) {
     mysqli_select_db($link, DB_DATABASE) or die("Could not find database");
     $query = "SELECT priority FROM user WHERE uid='" . $uid . "'";
     $result = mysqli_query($link, $query) or die("Data not found");
-    
     $output = mysqli_fetch_array($result);
-    echo "your priority is ".$output['priority'];
     
 }
 ?>
