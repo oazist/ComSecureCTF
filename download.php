@@ -2,10 +2,21 @@
 // Start session 
 session_start();
 // Include required functions file 
+require_once('include/config.inc.php');
 require_once('include/loginfunction.inc.php');
 // Check login status... if not logged in, redirect to login screen 
 if (check_login_status() == false) {
     redirect('login.php');
+} else {
+    $uid = $_SESSION['uid'];
+    $link = mysqli_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD) or die("Could not connect to host");
+    mysqli_select_db($link, DB_DATABASE) or die("Could not find database");
+    $query = "SELECT priority FROM user WHERE uid='" . $uid . "'";
+    $result = mysqli_query($link, $query) or die("Data not found");
+    
+    $output = mysqli_fetch_array($result);
+    echo "your priority is ".$output['priority'];
+    
 }
 ?>
 
@@ -31,7 +42,7 @@ if (check_login_status() == false) {
         </div>
         <div id="splash"></div>
         <div id="content">
-            <div id="colOne">
+            <?php if ($output['priority'] > 1) { ?>
                 <div class="content">
                     <div onClick="window.location = 'include/pdf.php'">	
                         </br></br></br></br>
@@ -42,17 +53,20 @@ if (check_login_status() == false) {
                     <div>	
                         </br></br></br></br></br></br>
                         <p align="center"> If you got the key. Please click picture. </p>
-
-
                     </div>
 
                     <div onClick="window.location = 'key.php'">	
                         <p align="center"><img  src="images/keybutton.png" alt="" width="260" height="255" </p>
                     </div>
                 </div><br />
-            </div>
-            <div style="clear: both;"></div>
+                <div style="clear: both;"></div>
+            <?php }else{ ?>
+                <div class="content">
+                    <h1>Sorry, your account does not have a privilege to download this file.</h1>
+                </div>
+            <?php } ?>
         </div>
+
         <div id="footer">
             <div id="footer2">
 

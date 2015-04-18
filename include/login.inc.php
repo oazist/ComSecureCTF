@@ -48,7 +48,7 @@ if ($_SESSION['logged_in'] == true) {
 		$_SESSION['username'] = $username;
 
 		$row = mysqli_fetch_array($result);
-		$_SESSION['uid'] = $row['id'];
+		$_SESSION['uid'] = $row['uid'];
 
 		$_SESSION['logged_in'] = true; 
 		redirect('../index.php'); 
