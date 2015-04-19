@@ -47,8 +47,7 @@ if (check_login_status() == false) {
                         <li><a href="include/logout.inc.php">Notable computer security attacks and breaches</a></li>
                         <li><a href="include/logout.inc.php">Legal issues ang global regulation</a></li>
                         <li><a href="include/logout.inc.php">Government</a></li>
-                        <li><a href="download.php">Link to file</a></li>
-
+                        <li style="visibility:hidden"><a href="download.php">Link to file</a></li>
                     </ul>
                 </div><br />
             </div>

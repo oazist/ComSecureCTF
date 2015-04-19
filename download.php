@@ -6,7 +6,7 @@ require_once('include/config.inc.php');
 require_once('include/loginfunction.inc.php');
 // Check login status... if not logged in, redirect to login screen 
 if (check_login_status() == false) {
-    redirect('login.php');
+    redirect('login.html');
 } else {
     $uid = $_SESSION['uid'];
     $link = mysqli_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD) or die("Could not connect to host");

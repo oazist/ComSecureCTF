@@ -5,7 +5,7 @@ session_start();
 require_once('include/loginfunction.inc.php');
 // Check login status... if not logged in, redirect to login screen 
 if (check_login_status() == false) {
-    redirect('login.php');
+    redirect('login.html');
 }
 ?>
 

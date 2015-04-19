@@ -5,7 +5,7 @@ session_start();
 require_once('include/loginfunction.inc.php');
 // Check login status... if not logged in, redirect to login screen 
 if (check_login_status() == false) {
-    redirect('login.php');
+    redirect('login.html');
 }
 ?>
 
@@ -14,7 +14,7 @@ if (check_login_status() == false) {
     <head>
         <style type="text/css">
             @import url("css/base_key.css");
-            @import url("css/layout.css");
+            @import url("css/layout_login.css");
             @import url("css/skeleton.css");
         </style>
 
@@ -30,7 +30,7 @@ if (check_login_status() == false) {
         </div>
         <div id="menu">
             <ul>
-                <li><a href="index.php" accesskey="1" title="">Home</a></li>
+                <li><a href="mainmenus.php" accesskey="1" title="">Home</a></li>
                 <li><a href="aboutus.php" accesskey="2" title="">About Us</a></li>
                 <li><a href="include/logout.inc.php" accesskey="5" title="">Log out</a></li>
             </ul>

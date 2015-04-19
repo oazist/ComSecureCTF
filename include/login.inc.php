@@ -14,7 +14,7 @@ session_start();
 // Check if user is already logged in 
 if ($_SESSION['logged_in'] == true) { 
 	// If user is already logged in, redirect to main page 
-	redirect('../index.php'); 
+	redirect('../mainmenus.php'); 
 }else{ 
 	// Make sure that user submitted a username/password and username only consists of alphanumeric chars 
 	if ((!isset($_POST['username'])) || (!isset($_POST['password'])) OR (!ctype_alnum($_POST['username']))) { 
@@ -51,7 +51,7 @@ if ($_SESSION['logged_in'] == true) {
 		$_SESSION['uid'] = $row['uid'];
 
 		$_SESSION['logged_in'] = true; 
-		redirect('../index.php'); 
+		redirect('../mainmenus.php'); 
 	}else{ 
 	// If number of rows returned is not one, redirect back to login screen 
 	redirect('../login.php'); 
