@@ -14,10 +14,10 @@ if (check_login_status() == false) {
     $query = "SELECT priority FROM user WHERE uid='" . $uid . "'";
     $result = mysqli_query($link, $query) or die("Data not found");
     $output = mysqli_fetch_array($result);
-    
 }
 ?>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -33,14 +33,14 @@ if (check_login_status() == false) {
         </div>
         <div id="menu">
             <ul>
-                <li><a href="index.php" accesskey="1" title="">Home</a></li>
+                <li><a href="mainmenus.php" accesskey="1" title="">Home</a></li>
                 <li><a href="aboutus.php" accesskey="2" title="">About Us</a></li
                 <li><a href="include/logout.inc.php" accesskey="5" title="">Log out</a></li>
             </ul>
         </div>
         <div id="splash"></div>
         <div id="content">
-            <?php if ($output['priority'] > 1) { ?>
+            <div id="colOne">
                 <div class="content">
                     <div onClick="window.location = 'include/pdf.php'">	
                         </br></br></br></br>
@@ -50,19 +50,39 @@ if (check_login_status() == false) {
 
                     <div>	
                         </br></br></br></br></br></br>
-                        <p align="center"> If you got the key. Please click picture. </p>
+                        <p align="center"> If you got the key, Please click the picture below. </p>
+
+
                     </div>
 
                     <div onClick="window.location = 'key.php'">	
                         <p align="center"><img  src="images/keybutton.png" alt="" width="260" height="255" </p>
                     </div>
                 </div><br />
-                <div style="clear: both;"></div>
-            <?php }else{ ?>
+            </div>
+
+            <div id="colTwo">
                 <div class="content">
-                    <h1>Sorry, your account does not have a privilege to download this file.</h1>
+                    <h3>Vulnerabilities</h3>
+                    <p>A vulnerability is a weakness which allows an attacker to reduce a system's information assurance. 
+                        Vulnerability is the intersection of three elements: a system susceptibility or flaw, attacker access 
+                        to the flaw, and attacker capability to exploit the flaw. To exploit a vulnerability, an attacker must
+                        have at least one applicable tool or technique that can connect to a system weakness. In this frame, 
+                        vulnerability is also known as the attack surface.</p>
+                    <h3>Vulnerable areas</h3>
+                    <p>- Financial systems</p>
+                    <p>- Utilities and industrial equipment</p>
+                    <p>- Aviation</p>
+                    <p>- Consumer devices</p>
+                    <p>- Large corporations</p>
+                    <p>- Automobiles</p>
+                    <p>- Government</p>
+                    <p><img src="images/sec2.jpg" alt="" width="190" height="170" /><br />
+                    </p>
                 </div>
-            <?php } ?>
+                <div class="boxed"></div>
+            </div>
+            <div style="clear: both;"></div>
         </div>
 
         <div id="footer">

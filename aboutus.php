@@ -24,7 +24,7 @@ if (check_login_status() == false) {
         </div>
         <div id="menu">
             <ul>
-                <li><a href="index.php" accesskey="1" title="">Home</a></li>
+                <li><a href="mainmenus.php" accesskey="1" title="">Home</a></li>
                 <li><a href="aboutus.php" accesskey="2" title="">About Us</a></li
                 ><li><a href="include/logout.inc.php" accesskey="5" title="">Log out</a></li>
             </ul>
