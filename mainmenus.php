@@ -20,11 +20,11 @@ if (check_login_status() == false) {
     </head>
     <body>
         <div id="logo">
-            <h1>Computer Security</h1>  ```````
+            <h1>Computer Security</h1>
         </div>
         <div id="menu">
             <ul>
-                <li><a href="mainmenu.php" accesskey="1" title="">Home</a></li>
+                <li><a href="mainmenus.php" accesskey="1" title="">Home</a></li>
                 <li><a href="profile.php" accesskey="2" title="">Profile</a></li>
                 <li><a href="aboutus.php" accesskey="3" title="">About Us</a></li>
                 <li><a href="include/logout.inc.php" accesskey="5" title="">Log out</a></li>
