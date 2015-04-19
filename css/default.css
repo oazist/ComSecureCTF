@@ -196,3 +196,9 @@ a:hover {
     color:#1AA5D3;
     text-decoration: underline;
 }
+
+#content .content .container{
+    border: 3px solid #0000FF;
+    height: 230px;
+    margin-top: 23px;
+}
