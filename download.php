@@ -20,7 +20,6 @@ if (check_login_status() == false) {
     }
 }
 ?>
-
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
@@ -46,9 +45,10 @@ if (check_login_status() == false) {
             <div id="content">
                 <div id="colOne">
                     <div class="content">
-                        <div onClick="window.location = 'include/pdf.php'">	
-                            </br></br></br></br>
-                            <p align="center"><img  src="images/download_button.jpg" alt="" width="200" height="100" </p>
+                         </br></br></br></br></br></br>
+                        <p align="center">The file is ready. Click to download the file.</p>
+                        <div>	
+                        <p align="center"><input type="image" src="images/download_button.jpg" alt="" width="200" height="100"/> </p>
                         </div>
 
 
